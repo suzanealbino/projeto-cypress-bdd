@@ -8,7 +8,9 @@ module.exports = defineConfig({
     specPattern: "**/*.feature",
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
-      on("file:preprocessor", createBundler({ plugins: [createEsbuildPlugin(config)] }));
+      on("file:preprocessor", createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      }));
       return config;
     },
   },
