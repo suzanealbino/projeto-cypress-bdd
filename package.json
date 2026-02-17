@@ -1,10 +1,18 @@
 {
-  "name": "projeto-qa-bdd",
+  "name": "projeto-cypress-bdd",
   "version": "1.0.0",
   "scripts": {
     "test": "cypress run"
   },
   "devDependencies": {
-    "cypress": "^13.0.0"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.6.0",
+    "esbuild": "^0.19.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ]
   }
 }
