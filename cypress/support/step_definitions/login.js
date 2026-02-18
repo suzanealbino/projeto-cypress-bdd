@@ -1,5 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
+// Removi as aspas extras e garanti o texto exato da Captura 29
 Given("que eu acesso a página de login", () => {
   cy.visit("https://www.saucedemo.com/");
 });
