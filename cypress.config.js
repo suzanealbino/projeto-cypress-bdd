@@ -1,11 +1,7 @@
-const { defineConfig } = require("cypress");
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
-const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
-
+// ... (mantenha os imports do topo)
 module.exports = defineConfig({
   e2e: {
-    specPattern: "**/*.feature",
+    specPattern: "cypress/e2e/**/*.feature",
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
       on("file:preprocessor", createBundler({
