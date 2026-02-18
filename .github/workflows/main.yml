@@ -1,3 +1,4 @@
+
 name: CI-Cypress
 on: [push]
 jobs:
@@ -12,4 +13,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           install: false
-          command: npx cypress run --spec "cypress/e2e/login.feature"
+          # Usar apenas 'npm test' força o uso do seu package.json
+          command: npm test
