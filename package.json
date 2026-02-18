@@ -2,7 +2,7 @@
   "name": "projeto-cypress-bdd",
   "version": "1.0.0",
   "scripts": {
-    "test": "cypress run"
+    "test": "cypress run --spec 'cypress/e2e/**/*.feature'"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "20.0.0",
